@@ -53,9 +53,9 @@ public class VM {
         if (INSTANCE != null) return INSTANCE;
 
         String name = System.getProperty("java.vm.name");
-        if (!name.contains("HotSpot") && !name.contains("OpenJDK")) {
-            throw new IllegalStateException("Only HotSpot/OpenJDK VMs are supported");
-        }
+        // if (!name.contains("HotSpot") && !name.contains("OpenJDK")) {
+        //     throw new IllegalStateException("Only HotSpot/OpenJDK VMs are supported");
+        // }
 
         Unsafe u = tryUnsafe();
         if (u == null) {
